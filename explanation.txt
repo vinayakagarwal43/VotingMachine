@@ -1,0 +1,22 @@
+4 candidates-- 4 push buttons
+reset button to reset the machine-- erase all vodes against each candidate
+mode button-- voting mode and counting mode
+practically reset and mode should not be in same machine
+display will display the count of votes against each candidate
+
+on the zedboard..
+4 push buttons work as buttons for four candidates
+one push button works as the reset button
+one dip switch used as mode control button
+all 8 LEDs blink for one second on successful casting of a vote
+the 8 LEDs will show the count of votes-- so 255 is the maximum votes a candidate can get
+
+
+buttonControl
+if the button is pressed for atleast 1 second, the vote is considered valid and is counted as one vote however long the button is pressed
+100000000 since the clock is clocked at 100MHz
+generates a single pulse on a valid vote
+
+modeControl
+mode 0=> voting mode
+mode 1=> counting/resut mode
